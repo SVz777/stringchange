@@ -80,35 +80,35 @@ func TestToCamelCase(t *testing.T) {
 	}{
 		{
 			s:    "abcd",
-			real: "Abcd",
+			real: "abcd",
 		},
 		{
 			s:    "a bc d",
-			real: "ABcD",
+			real: "aBcD",
 		},
 		{
 			s:    "a bc-d",
-			real: "ABcD",
+			real: "aBcD",
 		},
 		{
 			s:    "a_bc-d",
-			real: "ABcD",
+			real: "aBcD",
 		},
 		{
 			s:    "A_Bc-d",
-			real: "ABcD",
+			real: "aBcD",
 		},
 		{
 			s:    "aBCd",
-			real: "ABCd",
+			real: "aBCd",
 		},
 		{
-			s:    "a_Bc-d",
-			real: "ABcD",
+			s:    "A_Bc-d",
+			real: "aBcD",
 		},
 		{
-			s:    "a_bC-d",
-			real: "ABCD",
+			s:    "A_bC-d",
+			real: "aBCD",
 		},
 	}
 	for _, test := range tests {

@@ -82,7 +82,8 @@ func (sc *StringChange) To(_case stringCase) string {
 	switch _case {
 	case TypeCamelCase:
 		sb := strings.Builder{}
-		for _, word := range sc.Words {
+		sb.WriteString(sc.Words[0])
+		for _, word := range sc.Words[1:] {
 			sb.WriteString(strings.Title(word))
 		}
 		return sb.String()
